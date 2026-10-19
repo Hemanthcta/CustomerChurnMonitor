@@ -1,0 +1,137 @@
+{
+  "info": {
+    "_postman_id": "1169d069-9979-476f-8907-ddcfc83304e9",
+    "name": "ClientChurn",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "3688593"
+  },
+  "item": [
+    {
+      "name": "addAccount",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Acme Corp\",\r\n    \"licenseStartDateTime\": \"2026-10-17T00:00:00\",\r\n    \"licenseEndDateTime\": \"2027-10-17T00:00:00\",\r\n    \"clientAddress\": \"123 Main Street\",\r\n    \"phoneNumber\": \"555-0100\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/customerchurn/addAccount",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customerchurn",
+            "addAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AddEmp",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"clientIdentifier\": \"C1792295526\",\r\n    \"employeeId\": \"1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/customerchurn/addEmployee",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customerchurn",
+            "addEmployee"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateLoginCount",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"clientIdentifier\": \"C1792295526\",\r\n    \"employeeId\": \"1234\",\r\n    \"loginDateTime\" : \"2027-10-18T00:40:00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/customerchurn/updateLoginCount",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customerchurn",
+            "updateLoginCount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "calculateChurnPerc",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/churnreport/calculateChurnPerc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "churnreport",
+            "calculateChurnPerc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GenerateChurnReport",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/churnreport/generateChurnReport",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "churnreport",
+            "generateChurnReport"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
